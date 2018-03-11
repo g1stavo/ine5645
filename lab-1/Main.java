@@ -12,7 +12,7 @@ public class Main {
 		try {
 			for (int i = 0; i < 120; i++) {
 				readerThreads.execute(new Reader(buffer));
-				writerThreads.scheduleAtFixedRate(new Writer(buffer), 0, 300, TimeUnit.MILLISECONDS);
+				writerThreads.scheduleAtFixedRate(new Writer(buffer), 0, 1, TimeUnit.MILLISECONDS);
 			}
 		} catch (Exception exception) {
 			out.println("An exception has ocurred!");

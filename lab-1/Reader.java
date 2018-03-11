@@ -9,7 +9,7 @@ public class Reader implements Runnable {
 	public void run() {
 		for (int i = 0; i < 120; i++) {
 			while (message.read() != 0) {
-				
+				message.read();
 			}
 		}
 	}

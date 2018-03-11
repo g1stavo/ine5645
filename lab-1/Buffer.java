@@ -34,7 +34,7 @@ public class Buffer {
 		} else if (readerThread == 4) {
 			busy = false;
 			readerThread = 0;
-			notifyAll();
+			notify();
 		}
 		return message;
 	}
