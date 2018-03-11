@@ -1,28 +1,22 @@
-public class SharedBufferTest
-{
-   public static void main( String[] args )
-   {
-      // cria novo pool de threads com duas threads
-      ExecutorService application = Executors.newFixedThreadPool( 2 );
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-      // cria UnsynchronizedBuffer para armazenar ints
-      Buffer sharedLocation = new UnsynchronizedBuffer();
+public class SharedBufferTest {
+  public static void main(String[] args) {
+    ExecutorService application = Executors.newFixedThreadPool(2);
 
-      System.out.println( "Action\t\tValue\tProduced\tConsumed" );
-      System.out.println( "------\t\t-----\t--------\t--------\n" );
+    Buffer sharedLocation = new UnsynchronizedBuffer();
 
-      // tenta iniciar as threads produtora e consumidora fornecendo acesso a cada uma
-      // a sharedLocation
-      try 
-      {
-         application.execute( new Producer( sharedLocation ) );
-         application.execute( new Consumer( sharedLocation ) );
-      } // fim do try
-      catch ( Exception exception )
-      {
-         exception.printStackTrace();
-      } // fim do catch
+    System.out.println("Action\t\tValue\tProduced\tConsumed");
+    System.out.println("------\t\t-----\t--------\t--------\n");
 
-      application.shutdown(); // termina aplicativo quando as threads terminam
-   } // fim do main
-} 
+    try {
+      application.execute(new Producer(sharedLocation));
+      application.execute(new Consumer(sharedLocation));
+    } catch (Exception exception) {
+      exception.printStackTrace();
+    }
+
+    application.shutdown();
+  }
+}

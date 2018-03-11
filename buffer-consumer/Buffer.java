@@ -1,5 +1,5 @@
-public interface Buffer 
-{
-   public void set( int value ); 
-   public int get();
+public interface Buffer {
+  public void set(int value);
+
+  public int get();
 }
