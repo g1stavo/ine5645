@@ -5,9 +5,7 @@ public class AnnoyingBeep {
     public AnnoyingBeep() {
         toolkit = Toolkit.getDefaultToolkit();
         timer = new Timer();
-        timer.schedule(new RemindTask(),
-                       0,        //initial delay
-                       1*1000);  //subsequent rate
+        timer.schedule(new RemindTask(), 0, 1*1000);
     }
 
     class RemindTask extends TimerTask {
@@ -20,12 +18,8 @@ public class AnnoyingBeep {
             } else {
                 toolkit.beep(); 
                 System.out.println("Time's up!");
-                //timer.cancel(); // Not necessary because
-                                  // we call System.exit
-                System.exit(0);   // Stops the AWT thread 
-                                  // (and everything else)
+                System.exit(0);
             }
         }
     }
-    ...
 }
