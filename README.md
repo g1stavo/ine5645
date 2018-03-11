@@ -4,4 +4,4 @@
 
 <img src="https://www.serebii.net/pokearth/sprites/dp/374.png">
 
-I'm currently on a Parallel and Distributed Programming class and I'll insert the required exercises here.
+I'm currently on a Parallel and Distributed Programming class and I'll insert the required exercises/examples here.
