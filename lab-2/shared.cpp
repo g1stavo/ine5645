@@ -2,7 +2,7 @@
 
 int main() 
 {
-	int x;
+	int x = 1;
 	#pragma omp parallel for shared(x)
 		for (int i = 0; i < 25; i++) {
 			x += 1;

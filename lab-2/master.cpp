@@ -15,7 +15,7 @@ int main()
 
 		#pragma omp master
 		for (i = 0; i < 5; i++) 
-			std::cout << "a[" << a[i] << "] = " << i << "\n";
+			std::cout << "a[" << i << "] = " << a[i] << "\n";
 
 		#pragma omp barrier
 
