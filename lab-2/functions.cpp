@@ -13,7 +13,10 @@ int main()
 
 	#pragma omp parallel 
 	{
-		std::cout << "Thread number: " << omp_get_thread_num() << "\n";
+		#pragma omp critical 
+		{
+			std::cout << "Thread number: " << omp_get_thread_num() << "\n";
+		}		
 	}
 
 	sleep(1);
