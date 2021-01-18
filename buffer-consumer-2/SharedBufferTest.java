@@ -5,7 +5,6 @@ public class SharedBufferTest2 {
   public static void main(String[] args) {
 
     ExecutorService application = Executors.newFixedThreadPool(2);
-
     Buffer sharedLocation = new SynchronizedBuffer();
 
     System.out.printf(

@@ -10,11 +10,11 @@ public class ThreadPoolTest2 {
       workers[i] = new CallableWorkerThread(i);
       futures[i] = tpes.submit(workers[i]);
     }
+
     for (int i = 0; i < numWorkers; i++) {
       try {
         System.out.println("Ending worker: " + futures[i].get());
-      } catch (Exception e) {
-      }
+      } catch (Exception e) { }
     }
   }
 }

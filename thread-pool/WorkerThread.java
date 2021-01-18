@@ -10,8 +10,7 @@ public class WorkerThread implements Runnable {
       System.out.println("Worker number: " + workerNumber + ", percent complete: " + i);
       try {
         Thread.sleep((int) (Math.random() * 1000));
-      } catch (InterruptedException e) {
-      }
+      } catch (InterruptedException e) { }
     }
   }
 }

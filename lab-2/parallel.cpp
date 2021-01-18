@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 	#pragma omp parallel
 	{
 		std::cout << "Hello World!\n";

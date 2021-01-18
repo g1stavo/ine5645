@@ -1,5 +1,4 @@
 public class ReminderBeep {
-
   public ReminderBeep(int seconds) {
     toolkit = Toolkit.getDefaultToolkit();
     timer = new Timer();

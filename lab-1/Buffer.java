@@ -13,8 +13,10 @@ public class Buffer {
 				out.println("Thread " + Thread.currentThread().getName() + " did not write the message.");
 			}
 		}
+
 		message = msg;
 		busy = true;
+
 		out.println(Thread.currentThread().getName() + " write: " + message);
 		notifyAll();
 	}
@@ -27,6 +29,7 @@ public class Buffer {
 				out.println("Thread " + Thread.currentThread().getName() + " did not read the message.");
 			}
 		}
+		
 		if (readerThread < 4) {
 			readerThread++;
 			out.println(Thread.currentThread().getName() + " read: " + message);

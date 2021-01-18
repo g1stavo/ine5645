@@ -8,8 +8,7 @@ public class SimpleThread extends Thread {
       System.out.println(i + " " + getName());
       try {
         sleep((long) (Math.random() * 1000));
-      } catch (InterruptedException e) {
-      }
+      } catch (InterruptedException e) { }
     }
     System.out.println("DONE! " + getName());
   }

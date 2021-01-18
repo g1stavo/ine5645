@@ -12,9 +12,9 @@ public class CubbyHole2 {
       while (available == false) {
         try {
           condVar.await();
-        } catch (InterruptedException e) {
-        }
+        } catch (InterruptedException e) { }
       }
+
       available = false;
       System.out.println("Consumer " + who + " got: " + contents);
       condVar.signalAll();
@@ -30,9 +30,9 @@ public class CubbyHole2 {
       while (available == true) {
         try {
           condVar.await();
-        } catch (InterruptedException e) {
-        }
+        } catch (InterruptedException e) { }
       }
+      
       contents = value;
       available = true;
       System.out.println("Producer " + who + " put: " + contents);

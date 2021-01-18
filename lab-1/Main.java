@@ -9,6 +9,7 @@ public class Main {
 		Buffer buffer = new Buffer();
 		ScheduledExecutorService writerThreads = Executors.newScheduledThreadPool(1);
 		ExecutorService readerThreads = Executors.newFixedThreadPool(4);
+
 		try {
 			for (int i = 0; i < 120; i++) {
 				readerThreads.execute(new Reader(buffer));
@@ -17,8 +18,10 @@ public class Main {
 		} catch (Exception exception) {
 			out.println("An exception has ocurred!");
 		}
+
 		writerThreads.shutdownNow();
 		readerThreads.shutdownNow();
+		
 		while (!writerThreads.isTerminated()) {
 			try {
 				Thread.sleep(10);

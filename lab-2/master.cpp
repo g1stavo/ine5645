@@ -2,13 +2,11 @@
 #include <stdio.h>
 #include <iostream>
 
-int main() 
-{
+int main() {
 	int a[5], i;
 
 	#pragma omp parallel
 	{
-
 		#pragma omp for
 		for (i = 0; i < 5; i++)
 			a[i] = i * 1;

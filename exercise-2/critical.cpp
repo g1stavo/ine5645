@@ -1,12 +1,10 @@
 #include <iostream>
 
-int main() 
-{
+int main() {
 	int i = 1;
 
 	#pragma omp parallel
-		while (i < 250) 
-		{
+		while (i < 250) {
 			#pragma omp critical
 			i++;
 		}

@@ -14,11 +14,9 @@ public class SynchronizedBuffer implements Buffer {
     }
 
     buffer = value;
-
     occupied = true;
 
     displayState("Producer writes " + buffer);
-
     notify();
   }
 
@@ -35,10 +33,9 @@ public class SynchronizedBuffer implements Buffer {
     }
 
     occupied = false;
-
     int readValue = buffer;
+    
     displayState("Consumer reads " + readValue);
-
     notify();
 
     return readValue;

@@ -5,6 +5,7 @@ public class ThreadTester {
     thread2 = new PrintThread("thread2");
     thread3 = new PrintThread("thread3");
     thread4 = new PrintThread("thread4");
+    
     System.err.println("\nStarting threads");
     thread1.start();
     thread2.start();

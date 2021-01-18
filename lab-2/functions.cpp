@@ -3,8 +3,7 @@
 #include <iostream>
 #include <unistd.h>
 
-int main() 
-{
+int main() {
 	double start = omp_get_wtime();
 	std::cout << "Start time: " << start << "\n";
 

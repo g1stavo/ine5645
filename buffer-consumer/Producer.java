@@ -10,7 +10,6 @@ public class Producer implements Runnable {
 
   public void run() {
     int sum = 0;
-
     for (int count = 1; count <= 10; count++) {
       try {
         Thread.sleep(generator.nextInt(3000));

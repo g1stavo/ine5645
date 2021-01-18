@@ -36,8 +36,7 @@ public class Clock extends java.applet.Applet implements Runnable {
       repaint();
       try {
         Thread.sleep(1000);
-      } catch (InterruptedException e) {
-      }
+      } catch (InterruptedException e) { }
     }
   }
 
@@ -46,11 +45,13 @@ public class Clock extends java.applet.Applet implements Runnable {
     currentDate = new Date();
     formatter = DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.MEDIUM, locale);
     today = formatter.format(currentDate);
+
     g.setFont(clockFaceFont);
     g.setColor(getBackground());
     g.drawString(lastdate, 0, 12);
     g.setColor(numberColor);
     g.drawString(today, 0, 12);
+
     lastdate = today;
     currentDate = null;
   }

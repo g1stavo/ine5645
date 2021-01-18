@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main() 
-{
+int main() {
 	int val, sum = 0;
 	#pragma omp parallel sections private(val) reduction(+:sum)
 	{
@@ -10,6 +9,7 @@ int main()
 			val = 5;
 			sum += val;
 		}
+		
 		#pragma omp section
 		{
 			val = 3;

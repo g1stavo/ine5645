@@ -4,7 +4,6 @@ import java.util.concurrent.Executors;
 public class SharedBufferTest {
   public static void main(String[] args) {
     ExecutorService application = Executors.newFixedThreadPool(2);
-
     Buffer sharedLocation = new UnsynchronizedBuffer();
 
     System.out.println("Action\t\tValue\tProduced\tConsumed");

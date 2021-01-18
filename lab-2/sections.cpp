@@ -1,7 +1,6 @@
 #include <iostream>
 
-void sect_example()
-{
+void sect_example() {
 	#pragma omp parallel sections
 	{
 		#pragma omp section
@@ -15,7 +14,6 @@ void sect_example()
 	}
 }
 
-int main()
-{
+int main() {
 	sect_example();
 }

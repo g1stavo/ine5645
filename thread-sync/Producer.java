@@ -12,8 +12,7 @@ public class Producer extends Thread {
       cubbyhole.put(number, i);
       try {
         sleep((int) (Math.random() * 100));
-      } catch (InterruptedException e) {
-      }
+      } catch (InterruptedException e) { }
     }
   }
 }

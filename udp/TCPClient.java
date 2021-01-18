@@ -12,7 +12,8 @@ public class TCPClient {
 	public TCPClient() {
 		try {
 			serverAddress = InetAddress.getLocalHost();			
-			String ipServerAddress = serverAddress.getHostName();			
+			String ipServerAddress = serverAddress.getHostName();
+						
 			oSocket = new Socket(ipServerAddress, port);
 			ObjectInputStream ois = new ObjectInputStream(oSocket.getInputStream());
 			String response = (String)ois.readUTF();			 
